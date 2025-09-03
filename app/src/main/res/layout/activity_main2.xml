@@ -8,4 +8,54 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <Button
+      android:id="@+id/button2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Button2"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/button3"
+
+      />
+
+  <Button
+      android:id="@+id/button3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Button3"
+      app:layout_constraintTop_toTopOf="@id/button3"
+      app:layout_constraintStart_toEndOf="@id/button2"
+      app:layout_constraintEnd_toEndOf="parent"
+
+      />
+  <TextView
+      android:id="@+id/text2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="表示されている"
+      android:textSize="20sp"
+      app:layout_constraintTop_toBottomOf="@id/button2"
+      app:layout_constraintStart_toStartOf="parent"
+      />
+  <TextView
+      android:id="@+id/text3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="これは最初は表示されている"
+      android:textSize="20sp"
+      android:visibility="gone"
+      app:layout_constraintTop_toBottomOf="@id/text2"
+      app:layout_constraintStart_toStartOf="parent"
+      />
+  <TextView
+      android:id="@+id/text4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="これも最初も表示されている"
+      android:textSize="20sp"
+      android:visibility="invisible"
+      app:layout_constraintTop_toBottomOf="@id/text3"
+      app:layout_constraintStart_toStartOf="parent"
+      />
+</androidx.constraintlayout.widget.ConstraintLayout>
